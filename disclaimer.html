@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>免责声明 - 资源分享平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#6B7280',
+                        neutral: '#F9FAFB',
+                        dark: '#1F2937'
+                    },
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .transition-custom {
+                transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+        }
+    </style>
+</head>
+<body class="font-inter bg-neutral min-h-screen flex flex-col">
+    <!-- 导航栏 -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="https://shichencike.github.io/jubilant-octo-disco/" class="flex items-center">
+                        <i class="fa fa-share-alt text-primary text-2xl mr-2"></i>
+                        <span class="font-bold text-xl text-dark">资源分享平台</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center">
+                    <a href="https://shichencike.github.io/jubilant-octo-disco/" class="text-secondary hover:text-primary transition-colors duration-200">首页</a>
+                </div>
+                <div class="md:hidden">
+                    <button type="button" class="text-secondary hover:text-primary" id="mobile-menu-button">
+                        <i class="fa fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-secondary hover:text-primary hover:bg-gray-50">首页</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要内容 -->
+    <main class="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg">
+            <div class="px-6 py-8 sm:px-8">
+                <div class="text-center mb-8">
+                    <h1 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-dark mb-2">免责声明</h1>
+                    <div class="w-20 h-1 bg-primary mx-auto rounded-full"></div>
+                </div>
+                
+                <div class="space-y-6 text-gray-700">
+                    <div class="prose max-w-none">
+                        <p class="text-lg leading-relaxed">
+                            欢迎访问本站。本网站（以下简称"本站"）由[网站所有者名称]运营。使用本网站即表示您同意接受以下免责声明的所有条款和条件。如果您不同意这些条款和条件，请不要使用本网站。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-blue-50 border-l-4 border-primary p-4 rounded-r-lg">
+                        <h2 class="text-xl font-semibold text-primary mb-2">一、关于资源内容</h2>
+                        <p class="mb-3">
+                            本站所有资源均为用户自发上传，不代表本站立场。本站仅为用户提供信息存储空间，不对用户上传内容的真实性、准确性、完整性、合法性或有效性承担任何责任。
+                        </p>
+                        <p>
+                            所有在本站展示的资源，其版权归原作者或原出版机构所有。如涉及版权问题，请提供相关证明联系我们，我们将在收到通知后及时处理。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-blue-50 border-l-4 border-primary p-4 rounded-r-lg">
+                        <h2 class="text-xl font-semibold text-primary mb-2">二、资源使用限制</h2>
+                        <p class="mb-3">
+                            本站所有资源仅供学习交流使用，明确禁止用于任何商业用途。您承诺不将从本站获取的资源用于营利目的，不进行任何形式的销售、出租、分发或其他商业活动。
+                        </p>
+                        <p>
+                            您在使用本站资源时，应遵守相关法律法规，尊重原作者的知识产权。因不当使用资源而产生的任何法律纠纷，均由使用者自行承担责任。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-blue-50 border-l-4 border-primary p-4 rounded-r-lg">
+                        <h2 class="text-xl font-semibold text-primary mb-2">三、责任声明</h2>
+                        <p class="mb-3">
+                            使用本站资源产生的一切后果由使用者自行承担，与本站无关。本站不对使用或无法使用本站资源导致的任何直接、间接、偶然、特殊或惩罚性损害负责，包括但不限于数据丢失、利润损失、业务中断等。
+                        </p>
+                        <p>
+                            本站不保证资源的完整性、准确性、适用性或及时性，也不保证资源不受病毒、恶意软件或其他有害成分的影响。使用者应自行采取必要的安全措施。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-blue-50 border-l-4 border-primary p-4 rounded-r-lg">
+                        <h2 class="text-xl font-semibold text-primary mb-2">四、链接条款</h2>
+                        <p class="mb-3">
+                            本站可能包含指向第三方网站的链接，这些链接仅为方便用户提供。本站不对第三方网站的内容、隐私政策或运营负责，也不代表本站对其内容的认可。
+                        </p>
+                        <p>
+                            访问第三方网站的风险由用户自行承担。如因访问第三方网站导致任何损失或纠纷，本站不承担任何责任。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-blue-50 border-l-4 border-primary p-4 rounded-r-lg">
+                        <h2 class="text-xl font-semibold text-primary mb-2">五、内容删除</h2>
+                        <p>
+                            如您发现本站存在侵犯您知识产权或其他合法权益的内容，请通过以下方式联系我们：
+                        </p>
+                        <div class="mt-3 ml-6">
+                            <p><i class="fa fa-envelope-o mr-2 text-primary"></i> 邮箱:13458934580@163.com</p>
+                            <p><i class="fa fa-phone mr-2 text-primary"></i> 电话:13458934580</p>
+                            <p><i class="fa fa-map-marker mr-2 text-primary"></i> 地址：[公司地址]</p>
+                        </div>
+                        <p class="mt-3">
+                            我们将在收到您的合法通知后，按照相关法律法规的要求及时处理。
+                        </p>
+                    </div>
+                    
+                    <div class="bg-blue-50 border-l-4 border-primary p-4 rounded-r-lg">
+                        <h2 class="text-xl font-semibold text-primary mb-2">六、免责声明的变更</h2>
+                        <p>
+                            本站保留随时修改或更新本免责声明的权利，修改后的条款将在本站发布后生效。您有责任定期查看本页面，以了解最新的免责声明内容。继续使用本站即表示您同意接受修改后的条款。
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-10 text-center">
+                    <a href="https://shichencike.github.io/jubilant-octo-disco/" class="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg shadow-lg hover:shadow-xl hover:bg-primary/90 transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="fa fa-arrow-left mr-2"></i> 返回首页
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-gray-300 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4 flex items-center">
+                        <i class="fa fa-share-alt text-primary mr-2"></i>
+                        资源分享平台
+                    </h3>
+                    <p class="text-sm mb-4">
+                        本站致力于为用户提供一个安全、便捷的资源分享平台，所有内容仅供学习交流使用。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary transition0 hover:text-primary transition-colors duration-200">
+                            <i class="fa fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-200">
+                            <i class="fa fa-wechat text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-200">
+                            <i class="fa fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-200">首页</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">关于我们</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-200">公司介绍</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-200">联系方式</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-primary transition-colors duration-200">隐私政策</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fa fa-envelope-o mt-1 mr-2 text-primary"></i>
+                            <span>13458934580@163.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-phone mt-1 mr-2 text-primary"></i>
+                            <span>13458934580</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mt-1 mr-2 text-primary"></i>
+                            <span>[公司地址]</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-500">
+                <p>© 2025 资源分享平台 版权所有 | <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-200">免责声明</a> | <a href="#" class="text-gray-400 hover:text-primary transition-colors duration-200">隐私政策</a></p>
+                <p class="mt-2">网站地址：<a href="https://shichencike.github.io/jubilant-octo-disco/" class="text-gray-400 hover:text-primary transition-colors duration-200">https://shichencike.github.io/jubilant-octo-disco/</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 移动端菜单切换
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md', 'bg-white/95', 'backdrop-blur-sm');
+                navbar.classList.remove('shadow-sm', 'bg-white');
+            } else {
+                navbar.classList.remove('shadow-md', 'bg-white/95', 'backdrop-blur-sm');
+                navbar.classList.add('shadow-sm', 'bg-white');
+            }
+        });
+        
+        // 页面加载动画
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('opacity-100');
+            document.body.classList.remove('opacity-0');
+        });
+    </script>
+</body>
+</html>    
